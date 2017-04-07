@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Quiz of Thrones</string>
+    <string name="toastAllRight">I salute to your Intelligence, you answered every question correctly</string>
+    <string name="toastNotAllRight">Try again, mate. You scored</string>
+    <string name="nameOfChair">What is the name of this comfortable chair?</string>
+    <string name="iron_throne">Iron Throne</string>
+    <string name="sword_throne">Sword Throne</string>
+    <string name="king_s_throne">King\'s Throne</string>
+    <string name="what_is_the_motto_of_house_stark">What is the motto of House Stark?</string>
+    <string name="winter_is_coming">Winter Is Coming</string>
+    <string name="children_of_wolfs">Children of Wolfs</string>
+    <string name="king_in_the_north">King in the North</string>
+    <string name="which_of_these_persons_are_baratheons">Which of these persons belong to House Baratheon?</string>
+    <string name="eddard">Eddard</string>
+    <string name="robert">Robert</string>
+    <string name="stannis">Stannis</string>
+    <string name="renly">Renly</string>
+    <string name="geralt">Geralt</string>
+    <string name="what_is_the_contient_called_where_the_main_story_of_game_of_thrones_takes_place">What is the contient called where the main story of Game of Thrones takes place?</string>
+    <string name="maybe_europe">Maybe Europe?</string>
+    <string name="what_is_the_book_saga_game_of_thrones_is_based_on_called">What is the book-saga Game of Thrones is based on called?</string>
+    <string name="a_song_of_fire_and_ice">A Song of Fire and Ice</string>
+    <string name="winds_of_winter">Winds of Winter</string>
+    <string name="a_song_of_ice_and_fire">A Song of Ice and Fire</string>
+    <string name="score">Score</string>
+    <string name="george_raymond_richard_martin">George Raymond Richard Martin</string>
+    <string name="george_ronald_reuel_martin">George Ronald Reuel Martin</string>
+    <string name="who_is_this">Who is this?</string>
+    <string name="lyanna_stark">Lyanna Stark</string>
+    <string name="rheagar_targaryen">Rheagar Targaryen</string>
+    <string name="eddard_stark">Eddard Stark</string>
+    <string name="aegon_targaryen">Aegon Targaryen</string>
+    <string name="who_of_these_persons_are_the_parents_of_jon_snow">Who of these persons are the parents of Jon Snow?</string>
+    <string name="when_you_play_the_quiz_of_thrones_you_win_or_you_die">When you play the Quiz of Thrones, you win or you die</string>
+</resources>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quizofthrones.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="95">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Naming Scheme: The CardViews are named "Qn", Q for question and
+            n for the number of that question; the answer options are named after
+             the Question + the number of the answer, i.e. QnAm-->
+
+            <!-- this is the first Card (id:Q1)where user is asked what chair is seen on the image -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nameOfChair"
+                        style="@style/header"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/throne" />
+
+                        <RadioGroup
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/Q1A1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/iron_throne"
+                                android:onClick="adjustProgressBar"/>
+
+                            <RadioButton
+                                android:id="@+id/Q1A2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sword_throne"
+                                android:onClick="adjustProgressBar"/>
+
+                            <RadioButton
+                                android:id="@+id/Q1A3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/king_s_throne"
+                                android:onClick="adjustProgressBar"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- second card (id:Q2) asking for the motto of house stark  -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@id/Q1"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/what_is_the_motto_of_house_stark"
+                        style="@style/header"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="adjustProgressBar">
+
+                        <RadioButton
+                            android:id="@+id/Q2A1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/winter_is_coming"
+                            android:onClick="adjustProgressBar"/>
+
+                        <RadioButton
+                            android:id="@+id/Q2A2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/children_of_wolfs"
+                            android:onClick="adjustProgressBar"/>
+
+                        <RadioButton
+                            android:id="@+id/Q2A3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/king_in_the_north"
+                            android:onClick="adjustProgressBar"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- third card (id: Q3) asking which of the given persons are Baratheons -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@+id/Q2"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/which_of_these_persons_are_baratheons"
+                        style="@style/header"/>
+
+                    <CheckBox
+                        android:id="@+id/Q3A1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eddard"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q3A2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/robert"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q3A3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stannis"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q3A4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/renly"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q3A5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/geralt"
+                        android:onClick="adjustProgressBar"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- forth card (id: Q4) asking on which continent the main story of game of thrones play -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@+id/Q3"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/what_is_the_contient_called_where_the_main_story_of_game_of_thrones_takes_place"
+                        style="@style/header"/>
+
+                    <EditText
+                        android:id="@+id/Q4A1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/maybe_europe"
+                        android:inputType="textCapWords"
+                        android:maxLines="1"
+                        android:onClick="adjustProgressBar"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- fifth card (id: Q5) asking what the original novel saga is named -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@id/Q4"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/what_is_the_book_saga_game_of_thrones_is_based_on_called"
+                        style="@style/header"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="adjustProgressBar">
+
+                        <RadioButton
+                            android:id="@+id/Q5A1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/a_song_of_fire_and_ice"
+                            android:onClick="adjustProgressBar"/>
+
+                        <RadioButton
+                            android:id="@+id/Q5A2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/winds_of_winter"
+                            android:onClick="adjustProgressBar"/>
+
+                        <RadioButton
+                            android:id="@+id/Q5A3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/a_song_of_ice_and_fire"
+                            android:onClick="adjustProgressBar"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- sixth card (id: Q6) asking what who the parent of Jon Targaryen are -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@+id/Q5"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_of_these_persons_are_the_parents_of_jon_snow"
+                        style="@style/header"/>
+
+                    <CheckBox
+                        android:id="@+id/Q6A1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aegon_targaryen"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q6A2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eddard_stark"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q6A3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rheagar_targaryen"
+                        android:onClick="adjustProgressBar"/>
+
+                    <CheckBox
+                        android:id="@+id/Q6A4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lyanna_stark"
+                        android:onClick="adjustProgressBar"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- this is the last Card (id:Q7) where user is asked who the creator of GoT is -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/Q7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Q1"
+                android:layout_alignRight="@+id/Q1"
+                android:layout_below="@+id/Q6"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/who_is_this"
+                        style="@style/header"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/grr_martin" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/Q7A1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/george_ronald_reuel_martin"
+                            android:onClick="adjustProgressBar"/>
+
+                        <RadioButton
+                            android:id="@+id/Q7A2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/george_raymond_richard_martin"
+                            android:onClick="adjustProgressBar"/>
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- The Score-Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Q7"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/score"
+                    android:onClick="scoreQuestions"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:max="10"/>
+</LinearLayout>
